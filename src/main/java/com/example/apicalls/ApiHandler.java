@@ -12,10 +12,15 @@ public class ApiHandler {
     public String get() {
 
         RestTemplate template = new RestTemplate();
-        String users = template.getForObject("https://jsonplaceholder.typicode.com/todos", String.class);
+        return template.getForObject("https://jsonplaceholder.typicode.com/todos", String.class);
 
-        return users;
+    }
 
+    @GetMapping(value = "/user")
+    public String getUser() {
+
+        RestTemplate template = new RestTemplate();
+        return template.getForObject("https://jsonplaceholder.typicode.com/todos/1", String.class);
     }
 
 }
