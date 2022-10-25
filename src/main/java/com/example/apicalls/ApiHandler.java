@@ -5,7 +5,6 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class ApiHandler {
-
     @GetMapping(value = "/users")
     public String get() {
         RestTemplate template = new RestTemplate();
